@@ -14,7 +14,7 @@
      run: |
       cd formatter_lib
       cmake -B lib
-      cmake --build lib --target formatter
+      cmake --build lib --target formatter.cpp
       ./lib/formatter > for.txt
       cat for.txt
       cd ..
