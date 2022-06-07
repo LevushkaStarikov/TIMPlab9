@@ -18,6 +18,13 @@
        ./applications/hello_world > hello.txt
        cat hello.txt
        cd ..
+       
+   - name: Upload_artifact
+     uses: actions/upload-artifact@v3
+     with:
+       name: hello_world
+       path: |
+         ./hello_world_application/hello.txt
 
    - name: download_artifact 
      uses: actions/download-artifact@v3
