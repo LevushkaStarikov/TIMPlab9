@@ -1,0 +1,20 @@
+ name: actions
+ on: 
+   push
+
+ jobs:
+  Build:
+   runs-on: ubuntu-latest
+   steps:
+  
+   - name: git clone
+     uses: actions/checkout@v1
+     
+   - name: build formatter_lib
+     run: |
+      cd formatter_lib
+      cmake -B lib
+      cmake --build lib --target formatter
+      ./lib/formatter > for.txt
+      cat for.txt
+      cd ..
