@@ -16,7 +16,6 @@
        cmake -B applications
        cmake --build applications --target hello_world
        ./applications/hello_world > hello.txt
-       cat hello.txt
        cd ..
        
    - name: Upload_artifact
@@ -31,4 +30,9 @@
      with:
        name: hello_world
        path: ./artifact
-       
+   
+   - name: Display structure of downloaded files v1
+     run: |
+       ls -R
+       cat hello.txt
+     working-directory: ./artifact
