@@ -31,7 +31,7 @@
        name: hello_world
        path: ./art
    
-   - name: Display structure of downloaded files v1
+   - name: Display
      run: |
        ls -R
        cat hello.txt
